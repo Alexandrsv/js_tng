@@ -1,0 +1,20 @@
+// Для длинного числа верните всю возможную сумму его двух цифр.
+//
+// Например, 12345: все возможные суммы двух цифр из этого числа:
+// [ 1 + 2, 1 + 3, 1 + 4, 1 + 5, 2 + 3, 2 + 4, 2 + 5, 3 + 4, 3 + 5, 4 + 5 ]
+// [ 3, 4, 5, 6, 5, 6, 7, 7, 8, 9 ]
+
+const num = 12345
+
+function digits(num) {
+    let arrSum = []
+    let arrNum = [...`${num}`]
+    arrNum.forEach((n, index) => {
+        const currentArrNum = arrNum.slice(index*1+1)
+        currentArrNum.length && arrSum.push(...currentArrNum.map(i=>n*1+i*1))
+
+    })
+    return arrSum
+}
+
+console.log(digits(num))

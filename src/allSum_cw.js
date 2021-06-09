@@ -10,8 +10,8 @@ function digits(num) {
     let arrSum = []
     let arrNum = [...`${num}`]
     arrNum.forEach((n, index) => {
-        const currentArrNum = arrNum.slice(index*1+1)
-        currentArrNum.length && arrSum.push(...currentArrNum.map(i=>n*1+i*1))
+        const currentArrNum = arrNum.slice(index * 1 + 1)
+        currentArrNum.length && arrSum.push(...currentArrNum.map(i => n * 1 + i * 1))
 
     })
     return arrSum

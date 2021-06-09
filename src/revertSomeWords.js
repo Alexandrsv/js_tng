@@ -9,7 +9,7 @@
 // spinWords("This is another test") => "This is rehtona test"
 
 function spinWords(string) {
-    return string.split(' ').map(w => w.length >= 5 ? [...w.trim()].reverse().join('') : w.trim()).join(' ').trim()
+    return string.split(' ').map(w => w.length >= 5 ? [...w.trim()].reverse().join('') : w.trim())
 }
 
 console.log(spinWords("Hey fellow warriors"))
